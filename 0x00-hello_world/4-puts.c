@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
-* main - Entry Point
-* * Return: This is 0
-*/
+ * main - Entry Point
+ *
+ * Return: This is 0
+ */
 
 int main(void)
 {
