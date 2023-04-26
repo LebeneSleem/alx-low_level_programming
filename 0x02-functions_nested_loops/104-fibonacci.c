@@ -6,16 +6,24 @@
  */
 int main(void)
 {
-	int a = 1, b = 2, c;
+	int i = 0;
+	unsigned long int a = 0, b = 1, next = 0;
 
-	printf("%d, %d, ", a, b);
-	for (int i = 2; i < 98; i++)
+	while (i < 98)
 	{
-		c = a + b;
+		next = a + b;
 		a = b;
-		b = c;
-		printf("%d, ", c);
+		b = next;
+		{
+			printf("%lu", next);
+		}
+
+		if (i < 97)
+		{
+			printf(", ");
+		}
+		i++;
 	}
-	printf("%d\n", a + b);
+	putchar('\n');
 	return (0);
 }
