@@ -1,25 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - main block
+ * main - Entry Point
  * Return: 0
  */
 int main(void)
 {
-	int i = 0;
-	unsigned long int a = 0, b = 1, next = 0;
+	int a = 1, b = 2, c;
 
-	while (i < 98)
+	printf("%d, %d, ", a, b);
+	for (int i = 2; i < 98; i++)
 	{
-		next = a + b;
+		c = a + b;
 		a = b;
-		b = next;
-		printf("%lu", next);
-
-		if (i < 97)
-			printf(", ");
-		i++;
+		b = c;
+		printf("%d, ", c);
 	}
-	putchar('\n');
+	printf("%d\n", a + b);
 	return (0);
 }
