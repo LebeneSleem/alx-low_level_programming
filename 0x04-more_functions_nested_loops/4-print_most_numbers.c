@@ -7,7 +7,7 @@
  */
 void print_most_numbers(void)
 {
-	char numbers[] = {'0', '1', '3', '5', '6', '7', '8', '9'};
+	char numbers[] = "01356789";
 	int i;
 
 	for (i = 0; i < 10; i++)
