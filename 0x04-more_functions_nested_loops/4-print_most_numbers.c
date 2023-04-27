@@ -7,12 +7,12 @@
  */
 void print_most_numbers(void)
 {
-	char numbers[] = "01356789";
-	int i;
+	char c;
 
-	for (i = 0; i < 10; i++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		_putchar(numbers[i]);
+		if (!(c == '2' || c == '4'))
+			_putchar(c);
 	}
 	_putchar('\n');
 }
