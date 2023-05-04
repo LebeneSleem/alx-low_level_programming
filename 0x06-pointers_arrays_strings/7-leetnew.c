@@ -8,24 +8,21 @@
  */
 char *leet(char *l)
 {
-	char a[] = "aeotlAEOTL";
+	char a[] = "aeotLAEOTL";
 	char b[] = "4307143071";
 	int c = 0;
+	int d;
 
 	while (*(l + c) != '\0')
 	{
-		int d = 0;
-
-		while (a[d] != '\0')
+		for (d = 0; d <= 9; d++)
 		{
 			if (*(l + c) == a[d])
 			{
 				*(l + c) = b[d];
-				break;
 			}
-			d++;
 		}
-		c++;
+		d++;
 	}
 	return (l);
 }
