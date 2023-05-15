@@ -13,12 +13,12 @@ char *create_array(unsigned int size, char c)
 	char *ptra;
 	unsigned int b;
 
-	ptra = (char *) malloc(size * sizeof(char));
-
 	if (size == 0)
 	{
 		return (NULL);
 	}
+
+	ptra = (char *) malloc(size * sizeof(char));
 
 	for (b = 0; b < size; b++)
 	{
