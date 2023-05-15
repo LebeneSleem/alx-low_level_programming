@@ -23,4 +23,7 @@ char *create_array(unsigned int size, char c)
 		ptra[b] = c;
 	}
 	return (ptra);
+
+	free(ptra);
+	return (0);
 }
