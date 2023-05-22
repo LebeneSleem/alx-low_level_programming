@@ -22,5 +22,5 @@ void print_dog(struct dog *d)
 	if (d->age >= 0.0 && d->age <= 100.0)
 		printf("age: %f\n", d->age);
 	else
-		printf("age: (nil)\n");
+		puts("age: (nil)\n");
 }
