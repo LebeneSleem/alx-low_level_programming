@@ -20,7 +20,7 @@ void print_dog(struct dog *d)
 	printf("owner: %s\n", d->owner);
 
 	if (d->age >= 0.0 && d->age <= 100.0)
-		printf("age: %f\n", d->age);
+		printf("age: %6f\n", d->age);
 	else
 		puts("age: (nil)\n");
 }
