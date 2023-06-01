@@ -1,5 +1,7 @@
 #include "lists.h"
 
+void print_first(void) __attribute__ ((constructor));
+
 /**
  * print_first - function that prints sentences before the main
  * Return: 0
