@@ -9,12 +9,12 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int decimal = 0;
-	int a = 0;
+	int a;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 
-	while (b[a])
+	for (a = 0; b[a]; a++)
 	{
 		if (b[a] < '0' || b[a] > '1')
 			return (0);
