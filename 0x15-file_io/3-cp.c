@@ -1,7 +1,7 @@
 #include "main.h"
 
 char *create_buffer(char *file);
-void close_file(int F_D);
+void close_file(int fd);
 
 /**
  * create_buffer - Allocates 1024 bytes for a buffer.
@@ -28,24 +28,24 @@ char *create_buffer(char *file)
 
 /**
  * close_file - closes the file descriptors
- * @F_D: file descriptor
+ * @fd: file descriptor
  */
-void close_file(int F_D)
+void close_file(int fd)
 {
 	int a;
 
-	a = close(F_D);
+	a = close(fd);
 
 	if (a == 1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", F_D);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
 
 /**
  * main - Copies the contents of a file to another file.
- * @argc: The number of arguments supplied to the program.
+ * @argc: Argument count
  * @argv: An array of pointers to the arguments.
  *
  * Return: 0 on success.
